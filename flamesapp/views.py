@@ -34,5 +34,5 @@ def app(request):
         else:
             messages.error(request,"Please you are only allow to input name characters thanks.")
 
-    return render(request,"flamesapp/flamesapp.html")
+    return render(request,"flamesapp/index.html")
 
