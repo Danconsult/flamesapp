@@ -1,0 +1,26 @@
+{% extends 'flamesapp/_base.html' %}
+{% block title %}
+Flameasapp
+{% endblock title %}
+{% block content %}
+<header>
+    <h1>Flames App</h1>
+    <p style = "color: white;">Discover your relationship status with a fun twist!</p>
+</header>
+
+<main>
+    <form method="post">
+        {% csrf_token %}
+        <label for="your_name">Your Name:</label>
+        <input type="text" id="your_name" name="your_name" required>
+
+        <label for="partner_name">Partner's Name:</label>
+        <input type="text" id="partner_name" name="partner_name" required>
+
+        <button type="submit">Check Flames</button>
+    </form>
+
+    <p>Curious about your relationship status? Enter your names and find out now!</p>
+</main>
+
+{% endblock content %}
